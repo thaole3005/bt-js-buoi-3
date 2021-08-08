@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----START------- */
+main {
+  max-height: 100vh;
+  padding: 3rem 0;
+}
+
+.input_inline {
+  display: inline !important;
+  width: auto !important;
+}
+
+p.show_result_text {
+margin-top: 2rem;
+  padding: 20px 30px;
+  border: 2px solid green;
+  text-align: center;
+}
+
+
+/* form {
+    text-align: center;
+} */

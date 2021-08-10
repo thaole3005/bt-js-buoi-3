@@ -84,12 +84,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
       if (a < b) {
         console.log(` ${c} < ${a} < ${b}`); //c<a<b
         show_result_text[index].innerHTML = ` ${c} < ${a} < ${b}`;
-      } else {
+      } else  {
         console.log(` ${c} < ${b} < ${a}`); //c<b<a
         show_result_text[index].innerHTML = ` ${c} < ${b} < ${a}`;
       }
-    } else {
+
+    }else if (b < a && b == c) {
+      show_result_text[index].innerHTML = ` ${b} < ${c} < ${a}`;
+
+    }
+
+    else if (a < c && a == b) {
+      show_result_text[index].innerHTML = ` ${a} < ${b} < ${c}`;
+
+    }
+    else if (a < b && a == c) {
+      show_result_text[index].innerHTML = ` ${a} < ${c} < ${b}`;
+
+    }
+    
+    else {
       console.log("3 số bằng nhau");
+      show_result_text[index].innerHTML = ` ${a} = ${b} = ${c}`;
+
     }
   }
 
@@ -287,7 +304,7 @@ function handleBT5(index) {
         case 8: donvi_text = 'tám'; break;
         case 9: donvi_text = 'chín'; break;
         default:  //số hàng đơn vị là 0
-          donvi_text = 'mươi';
+          donvi_text = '';
           if(chuc_text=== "linh") {
             chuc_text ="";
             donvi_text = "";
